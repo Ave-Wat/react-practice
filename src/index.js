@@ -7,7 +7,7 @@ class Frame extends React.Component {
         super(props)
         this.state = {
             recentValue: '',
-            expenses: Array(100).fill(null),
+            expenses: [],
             total: 0
         };
         this.addExpense = this.addExpense.bind(this);
@@ -37,7 +37,8 @@ class Frame extends React.Component {
             <div className="container">
                 <h1>Personal Finance Calculator</h1>
                 <form className='submission' onSubmit={this.handleSubmit}>
-                    <label>Enter your expenses:
+                    <h3>Enter your expenses</h3>
+                    <label>Expense:
                         <input
                             type="number"
                             step="0.01"
@@ -49,11 +50,31 @@ class Frame extends React.Component {
                     <input type="submit" value="Submit"/>
                 </form>
                 <div className='displayTotal'>
-                Total: {(this.state.total).toFixed(2)}
+                    <li>Total:</li>
+                    <li> {'$' + (this.state.total).toFixed(2)}</li>
+                </div>
+                <div>
+                    <h3>Expense History</h3>
+                    <DisplayReactList
+                        value={this.state.expenses}
+                    />
                 </div>
             </div>
         );
     }
+}
+
+function DisplayReactList(props) {
+    const expenses = props.value;
+    const listExpenses = expenses.map((expense) =>
+        <li key={expense}>
+            {'$' + parseFloat(expense, 10).toFixed(2)}
+        </li>
+    );
+
+    return (
+        <ul>{listExpenses}</ul>
+    );
 }
 
 //======
