@@ -2,13 +2,18 @@
 
 body {
     font-family: 'Inconsolata', monospace;
-    margin: 20px;
+    margin: 0;
     color: black;
 }
 
+h1, h2, h3 {
+    font-family: 'Merriweather', serif;
+}
+
+/*start header */
 header {
     font-family: 'Merriweather', serif;
-    display: flex;
+    display: flex !important;
     position: fixed;
     top: 0;
     left: 0;
@@ -23,15 +28,21 @@ header {
     z-index: 1;
 }
 
+header h1 {
+    float: left;
+    width: 40vw;
+    padding-left: 5vw;
+}
+
 nav {
-  float: right;
-  width: 55vw;
-  line-height: 40px;
+    height: 90px;
+    float: right;
+    width: 55vw;
 }
 
 nav a {
   float: left;
-  line-height: 50px;
+  line-height: 55px;
   text-decoration: none;
   text-align: center;
   color: white;
@@ -42,24 +53,38 @@ nav a:hover {
   color: lightgray;
 }
 
-header h1 {
-    float: left;
-    width: 40vw;
-    padding-left: 5vw;
-}
-
 nav li {
     list-style: none;
 }
+/*end header*/
+
+.imgContainer {
+    top: 0;
+    left: 0;
+    margin: 90px 0 0 0;
+    width: auto;
+    height: calc(100vh - 90px);
+    min-height: 100px;
+    line-height: calc(100vh - 90px);
+    display: block;
+    color: white;
+    background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5)), url("images/pfpic.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    text-align: center;
+}
 
 .pageContainer {
-    margin-top: 100px;
+    margin: 120px 30px 30px 30px;
 }
 
-h3 {
-    font-family: 'Merriweather', serif;
+.paragraph {
+    margin: 50px 30px;
 }
 
+/*start calculator page*/
 input {
     font-family: 'Inconsolata', monospace;
 }
@@ -82,3 +107,5 @@ form {
     width: 100px;
     padding: 2px 2px 0px 2px;
 }
+
+/*end calculator page */

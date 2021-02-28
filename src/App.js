@@ -23,9 +23,11 @@ const Navigation = () => (
 );
 
 const Home = () => (
-    <div className="pageContainer">
-        <img src="" alt="intro" />
-        <p>Hello! Welcome to this website! Use our personal finance calculator to track your monthly spending and earnings.</p>
+    <div>
+        <div className="imgContainer">
+            <h2>Track Your Finances</h2>
+        </div>
+        <p className="paragraph">Hello! Welcome to this website! Use our personal finance calculator to track your monthly spending and earnings.</p>
     </div>
 );
 
