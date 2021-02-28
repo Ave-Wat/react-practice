@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata&family=Merriweather&display=swap');
+
+body {
+    font-family: 'Inconsolata', monospace;
+    margin: 20px;
+    color: black;
+}
+
+header {
+    font-family: 'Merriweather', serif;
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 90px;
+    color: white;
+    background-color: black;
+    line-height: 1.5;
+    display: inline-block;
+    vertical-align: middle;
+    justify-content: space-around;
+    z-index: 1;
+}
+
+nav {
+  float: right;
+  width: 55vw;
+  line-height: 40px;
+}
+
+nav a {
+  float: left;
+  line-height: 50px;
+  text-decoration: none;
+  text-align: center;
+  color: white;
+  width: 16vw;
+}
+
+nav a:hover {
+  color: lightgray;
+}
+
+header h1 {
+    float: left;
+    width: 40vw;
+    padding-left: 5vw;
+}
+
+nav li {
+    list-style: none;
+}
+
+.pageContainer {
+    margin-top: 100px;
+}
+
+h3 {
+    font-family: 'Merriweather', serif;
+}
+
+input {
+    font-family: 'Inconsolata', monospace;
+}
+
+form {
+    margin-bottom: 20px;
+}
+
+.displayTotal {
+    font-weight: bold;
+    margin-left: 40px;
+}
+
+.calculator li {
+    top: -2px;
+    margin-top: -3;
+    list-style: none;
+    border-style: solid;
+    border-width: 1px;
+    width: 100px;
+    padding: 2px 2px 0px 2px;
+}
